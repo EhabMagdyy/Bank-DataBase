@@ -1,0 +1,19 @@
+# depslib dependency file v1.0
+1686191046 source:c:\users\ehab\documents\c\bank_database\bankdatabase_functions\database_functions.c
+	"database_functions.h"
+
+1686190993 c:\users\ehab\documents\c\bank_database\bankdatabase_functions\database_functions.h
+	<stdio.h>
+	<string.h>
+	<stdlib.h>
+	<stdbool.h>
+
+1686190993 source:c:\users\ehab\documents\c\bank_database\choice_handler\choice_handler.c
+	"Choice_handler.h"
+
+1686191070 c:\users\ehab\documents\c\bank_database\choice_handler\choice_handler.h
+	"../BankDatabase_Functions/database_functions.h"
+
+1686190993 source:c:\users\ehab\documents\c\bank_database\main.c
+	"Choice_Handler/choice_handler.h"
+
