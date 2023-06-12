@@ -31,6 +31,14 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
+		<Unit filename="BankDatabase_Functions/database_functions.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="BankDatabase_Functions/database_functions.h" />
+		<Unit filename="Choice_Handler/choice_handler.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Choice_Handler/choice_handler.h" />
 		<Unit filename="main.c">
 			<Option compilerVar="CC" />
 		</Unit>

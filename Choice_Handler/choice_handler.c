@@ -6,22 +6,22 @@ void choice(int selected_choice, customer_node_t** head_customer){
         printf("Invalid input!\n\n");
     }
     else{
-        if(1 == selected_choice){
+        if(create_customer_t == selected_choice){
             choice_create_customer(head_customer);
         }
-        else if(2 == selected_choice){
+        else if(edit_customer_t == selected_choice){
             choice_edit_customer(*head_customer);
         }
-        else if(3 == selected_choice){
+        else if(delete_customer_t == selected_choice){
             choice_delete_customer(head_customer);
         }
-        else if(4 == selected_choice){
+        else if(transfer_cash_t == selected_choice){
             choice_cash_transfer(*head_customer);
         }
-        else if(5 == selected_choice){
+        else if(print_customer_t == selected_choice){
             choice_print_customer(*head_customer);
         }
-        else if(6 == selected_choice){
+        else if(print_all_customers_t == selected_choice){
             choice_print_all_customers(*head_customer);
         }
         else{

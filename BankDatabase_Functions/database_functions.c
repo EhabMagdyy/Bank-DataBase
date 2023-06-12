@@ -52,7 +52,7 @@ void edit_customer(customer_node_t* head_customer, int id, char* name){
             ptr_search_for_customer = ptr_search_for_customer->link;
         }
         if(NULL == ptr_search_for_customer){
-            printf("There are no customers with ID: %d!\n\n", id);
+            printf("Error, There are no customers with ID: %d!\n\n", id);
         }
 
     }
@@ -89,7 +89,7 @@ customer_node_t* delete_customer(customer_node_t* head_customer, int id){
             }
 
             if(NULL == ptr_search_for_customer->link){
-                printf("There are no customers with ID: %d!\n\n", id);
+                printf("Error, There are no customers with ID: %d!\n\n", id);
             }
         }
 
@@ -110,7 +110,7 @@ void cash_transfer_from_customer_to_customer(customer_node_t* head_customer, int
         while(NULL != ptr_search_for_customer){
             if(from_id == ptr_search_for_customer->customer.id){
                 if(cash > ptr_search_for_customer->customer.cash){
-                    printf("Invalid amount of cash, Customer cash: %0.2lf!\n\n", ptr_search_for_customer->customer.cash);
+                    printf("Error, Invalid amount of cash, Customer cash: %0.2lf!\n\n", ptr_search_for_customer->customer.cash);
                     return;
                 }
                 else{
@@ -121,7 +121,7 @@ void cash_transfer_from_customer_to_customer(customer_node_t* head_customer, int
             ptr_search_for_customer = ptr_search_for_customer->link;
         }
         if(NULL == ptr_search_for_customer){
-            printf("There are no customers with ID: %d!\n\n", from_id);
+            printf("Error, There are no customers with ID: %d!\n\n", from_id);
             return;
         }
 
@@ -138,7 +138,7 @@ void cash_transfer_from_customer_to_customer(customer_node_t* head_customer, int
             ptr_search_for_customer = ptr_search_for_customer->link;
         }
         if(NULL == ptr_search_for_customer){
-            printf("There are no customers with ID: %d!\n\n", to_id);
+            printf("Error, There are no customers with ID: %d!\n\n", to_id);
         }
 
     }
@@ -155,9 +155,6 @@ void print_customer(customer_node_t* head_customer, int id){
             }
             head_customer = head_customer->link;
         }
-        if(NULL == head_customer){
-            printf("There are no customers with ID: %d!\n\n", id);
-        }
     }
 }
 
@@ -165,7 +162,7 @@ void print_customer(customer_node_t* head_customer, int id){
 void print_all_customers(customer_node_t* head_customer){
 
     if(NULL == head_customer){
-        printf("There are no customers!\n\n");
+        printf("Error, There are no customers!\n\n");
     }
     else{
         int customers_counter = 0;
@@ -186,11 +183,11 @@ bool check_entered_information_validity(customer_node_t* head_customer, int id){
     bool is_valid = false;
 
     if(NULL == head_customer){
-        printf("There are no customers!\n\n");
+        printf("Error, There are no customers!\n\n");
     }
     else{
         if((FIRST_ID > id) || (customer_id <= id)){
-            printf("There are no customers with ID: %d!\n\n", id);
+            printf("Error, There are no customers with ID: %d!\n\n", id);
         }
         else{
             is_valid = true;
